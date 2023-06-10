@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/link-styling.css">
     <link rel="stylesheet" href="/css/header.css">
 </head>
-<body class="random_bg">
+<body>
 
     <div class="header_line" style="width: 100vw; height:40px; margin-top: 40px; ">
         <div class="header" style="width: 100vw; height:40px; background: rgba(255,255,255,0.5)">
@@ -32,14 +32,5 @@
 
 </body>
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
-<script>
-    function pic() {
-        var bgm = ['/img/leaf1.jpg','/img/leaf2.jpg', '/img/leaf3.jpg'];
-
-        $('body').css({
-            'background' : 'url('+ bgm[Math.floor(Math.random() * bgm.length)] + ') no-repeat',
-        });
-    }
-    pic();
-</script>
+<script src='/js/changeImage.js'></script>
 </html>
