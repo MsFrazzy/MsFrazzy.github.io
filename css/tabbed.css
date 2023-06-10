@@ -1,0 +1,72 @@
+/* Tabs mit Radio-Buttons (aber als Labels gestyled)
+- .tabbed figure ist der Körper der Tabs und ist anfangs mit display:none ausgeschlossen.
+- Das Tilde-Zeichen ~ erzeugt einen Subsequent-sibling Combinator, locker übersetzt mit Indirekter Nachbar-Selektor.
+- https://www.mediaevent.de/css/css-selektor-kontextselektor.html
+- Ein Klick auf ein label-Element des jeweiligen input-Tags schaltet den Radiobutton in den Zustand checked und
+  das figure-Element wird sichtbar.
+- label-Elemente mit dem for-Attribut, das zum jeweiligen input-Tag passt, reagieren zusammen mit den input-Elementen,
+  auch wenn die Radio-Buttons mit display:none nicht eingespielt werden.
+- Das übrige CSS stylt die Label: setzt die Hintergrundfarbe des aktiven Labels und entfernt border-bottom unter
+  dem aktiven Label.
+*/
+.tabbed figure {
+    display: block;
+    margin-left: 0;
+    border-bottom: 1px solid silver;
+    clear: both;
+}
+
+.tabbed > input,
+.tabbed figure > div { display: none; }
+
+.tabbed figure>div {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid silver;
+    background: #fff;
+    line-height: 1.5em;
+    letter-spacing: 0.3px;
+    color: #444;
+}
+
+#tab1:checked ~ figure .tab1,
+#tab2:checked ~ figure .tab2,
+#tab3:checked ~ figure .tab3,
+#tab4:checked ~ figure .tab4 { display: block; }
+
+nav label {
+    float: left;
+    padding: 15px 15px;
+    border-top: 1px solid silver;
+    border-right: 1px solid silver;
+    background: hsl(210,50%,50%);
+    color: #eee;
+}
+
+nav label:nth-child(1) { border-left: 1px solid silver; }
+nav label:hover { background: hsl(210,50%,40%); }
+nav label:active { background: #ffffff; }
+
+#tab1:checked ~ nav label[for="tab1"],
+#tab2:checked ~ nav label[for="tab2"],
+#tab3:checked ~ nav label[for="tab3"],
+#tab4:checked ~ nav label[for="tab4"] {
+    background: white;
+    color: #111;
+    position: relative;
+    border-bottom: none;
+}
+
+#tab1:checked ~ nav label[for="tab1"]:after,
+#tab2:checked ~ nav label[for="tab2"]:after,
+#tab3:checked ~ nav label[for="tab3"]:after,
+#tab4:checked ~ nav label[for="tab4"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    left: 0;
+    bottom: -1px;
+}

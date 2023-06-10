@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+span {
+    margin-top: 5px;
+    height: 40px;
+    width: fit-content;
+}
+
+.logo {
+    top: -110%;
+    position: relative;
+    left: 100px;
+}
+
+.header_links {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 10px 0;
+    flex-grow: 1;
+    align-items: center;
+}
