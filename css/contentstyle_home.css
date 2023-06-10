@@ -1,0 +1,7 @@
+.content {
+    justify-content: flex-start;
+    display: flow;
+    padding: 2px 0;
+    font-family: Bahnschrift, sans-serif;
+    font-size: xx-large;
+}
