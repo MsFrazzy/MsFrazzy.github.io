@@ -1,0 +1,22 @@
+.content {
+    font-family: Bahnschrift, sans-serif;
+    font-size: x-large;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 10px 0;
+    gap: 10px
+}
+
+span {
+    margin-top: 5px;
+    margin-left: 60px;
+    width: fit-content;
+}
+
+.profilepic {
+    top: -40px;
+    position: relative;
+    padding-left: 100px;
+}
